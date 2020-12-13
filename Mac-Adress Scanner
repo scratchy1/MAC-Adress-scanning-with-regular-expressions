@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.util.regex.Pattern;
+// ...
+public static void MACExample () {
+    Scanner scanner = new Scanner(System.in);
+    // regular expression for MAC addresses
+    String macRegEx = "([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})";
+    String input = scanner.nextLine();
+    // Ex. b8:68:8f:27:6f:40
+    if (Pattern.matches(macRegEx, input)) {
+        System.out.println("ok");
+    }
+}
